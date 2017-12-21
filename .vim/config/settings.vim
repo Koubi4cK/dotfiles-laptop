@@ -16,5 +16,7 @@ set mouse=a
 set laststatus=2
 colorscheme nord
 
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
+let g:ycm_server_python_interpreter = '/usr/bin/python2'
 
+" GitGutter required
+set shell=/bin/bash
