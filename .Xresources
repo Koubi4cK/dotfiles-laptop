@@ -68,6 +68,21 @@ URxvt.url-launcher          : xdg-open
 URxvt.matcher.button        : 1
 URxvt.matcher.pattern.1     : \\bwww\\.[\\w-]\\.[\\w./?&@#-\[\]
 
+! +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+! Rofi
+! ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
+rofi.color-enabled          : true
+rofi.color-window           : nord0, nord0, nord0
+rofi.color-normal           : nord0, nord5, nord0, nord1, nord11
+rofi.color-active           : nord1, nord11, nord2, nord11, nord1
+rofi.color-urgent           : #e12a36, #dd2a4b, #1b2b34
+
+rofi.lines                  : 4
+rofi.hide-scrollbar         : true
+rofi.width                  : 300
+rofi.padding                : 20
+rofi.terminal               : termite
 rofi.show-icons             : true
-rofi.modi                   :  window,run,ssh,drun
+rofi.run-command            : fish -c '{cmd}'
