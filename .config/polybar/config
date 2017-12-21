@@ -52,7 +52,7 @@ font-2 = Wuncon Siji:pixelsize=10;0
 
 modules-left = i3 xkeyboard
 modules-center = 
-modules-right = spotify wlan battery volume  date
+modules-right = spotify wlan eth battery volume  date
 
 tray-position = right
 tray-padding = 2
@@ -233,17 +233,13 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 =  
 ramp-signal-foreground = ${colors.foreground-alt}
 ramp-signal-font = 1
  
 [module/eth]
 type = internal/network
-interface = 
+interface = enp2s0f1
 interval = 3.0
 
 format-connected-underline = #55aa55
