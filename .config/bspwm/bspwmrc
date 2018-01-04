@@ -1,0 +1,47 @@
+#! /bin/sh
+
+#sxhkd &
+
+set wall = $HOME/Images/wallpapers/mttaranaki.jpg
+#xautolock -detectsleep -time 5 -locker $HOME/.scripts/lock.sh
+# Border Colors
+bspc config normal_border_color "#2E3440"
+bspc config focused_border_color "#81A1C1"
+#bspc config urgent_border_color "#BF616A"
+#bspc config presel_border_color "#26E2FF"
+
+bspc monitor eDP1 -d 1 2 3 4 5
+bspc config focus_follows_pointer true
+bspc config border_width         4
+bspc config window_gap          12
+
+# Golden Number \o/
+bspc config split_ratio          0.618
+bspc config borderless_monocle   false
+bspc config gapless_monocle      false
+
+## park app to WS
+#WS1
+#WS2
+bspc rule -a Chromium desktop='^2'
+bspc rule -a Firefox desktop='^2'
+#WS3
+bspc rule -a Spotify desktop='^3'
+#WS4
+#WS5
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
+
+
+# Polybar
+$HOME/.config/polybar/polybar.sh
+
+# Screen Orientation
+#xrandr --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-4 --mode 1920x1080 --pos 0x0 --rotate normal --primary
+
+# Wallpaper
+#$HOME/.scripts/setwall.sh /nfs/wallpapers/
+feh --bg-scale /home/koubi4ck/Images/wallpapers/mttaranaki.jpg
